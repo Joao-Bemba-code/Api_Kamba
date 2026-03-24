@@ -6,19 +6,26 @@ const Users = sequelize.define("Users", {
     },
     Email: { 
         type: Sequelize.STRING,
-        unique: true // Boa prática para emails
+        unique: true
     },
     Senha: { 
-        type: Sequelize.STRING // CHAR sem tamanho é muito curto para hashes de bcrypt
+        type: Sequelize.STRING
     },
     Type_user: { 
-        // IMPORTANTE: O ENUM deve conter exatamente o que o frontend envia
         type: Sequelize.ENUM("entrepreneur", "investor"), 
         allowNull: false
     },
     IsAdmin: { 
         type: Sequelize.BOOLEAN, 
         defaultValue: false 
-    }
-})
+    },
+    Status:{
+        type:Sequelize.ENUM("Ativo","Pendente","Bloqueado"),
+        defaultValue:"Pendente"
+    },
+    Bio:{
+        type:Sequelize.STRING
+    },
+});
+
 module.exports = Users;
