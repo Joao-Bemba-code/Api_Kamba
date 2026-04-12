@@ -4,7 +4,7 @@ const router = express.Router();
 const ProjectModel = require("../models/projectos.js");
 
 // CONFIGURAÇÃO
-const GEMINI_KEY = process.env.GEMINI_API_KEY || 'AIzaSyDb-6TYRVTo4WZ2Y1U083wcIINfNjew_Ao';
+const GEMINI_KEY = process.env.GEMINI_API_KEY || 'AIzaSyCuv93-Cbo6P6b-w9k1zvQymHOLTW58ha8';
 const GEMINI_API_URL = `https://generativelanguage.googleapis.com/v1/models/gemini-2.5-flash:generateContent?key=${GEMINI_KEY}`;
 
 // Função para analisar projeto com IA
