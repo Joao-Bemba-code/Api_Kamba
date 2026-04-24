@@ -13,7 +13,11 @@ var projectos = sequelize.define("projectos",({
     Status:{type:Sequelize.ENUM("Em análise","Ativo"), defaultValue:"Em análise"},
     DuracaoProjecto:{type:Sequelize.INTEGER},
     ProbalidadeAi:{type:Sequelize.STRING,defaultValue:"0"},
-    Iduser:{type:Sequelize.INTEGER}
+    Iduser:{type:Sequelize.INTEGER},
+    Problematica:{type:Sequelize.TEXT},
+    Publico:{type:Sequelize.TEXT},
+    Solucao:{type:Sequelize.TEXT},
+
 }), {
     timestamps: true
 });
